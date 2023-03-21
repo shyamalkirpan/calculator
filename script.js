@@ -15,3 +15,11 @@ Array.from(buttons).forEach((button) => {
     }
   });
 });
+
+document.addEventListener("keydown", (e) => {
+  let key = e.key;
+  let button = document.querySelector(`.button[data-key="${key}"]`);
+  if (button) {
+    button.click();
+  }
+});
