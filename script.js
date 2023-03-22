@@ -13,7 +13,8 @@ Array.from(buttons).forEach((button) => {
       // sanitize the input
       const sanitizedInput = sanitizeInput(inputString);
       // evaluate the sanitized input
-      document.querySelector("input").value = eval(sanitizedInput);
+      inputString = eval(sanitizedInput);
+      document.querySelector("input").value = inputString;
     } else if (e.target.innerHTML == "C") {
       inputString = "";
       document.querySelector("input").value = inputString;
@@ -32,6 +33,9 @@ Array.from(buttons).forEach((button) => {
 
 document.addEventListener("keydown", (e) => {
   let key = e.key;
+  if (key === "Enter") {
+    key = "=";
+  }
   let button = document.querySelector(`.button[data-key="${key}"]`);
   if (button) {
     button.click();

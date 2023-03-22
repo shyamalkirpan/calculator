@@ -24,3 +24,7 @@ body {
   border-radius: 9px;
   font-size: 20px;
 }
+
+#display {
+  text-align: right;
+}
