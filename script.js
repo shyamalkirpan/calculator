@@ -26,11 +26,6 @@ Array.from(buttons).forEach((button) => {
   });
 });
 
-// let input = document.querySelector(".input");
-// input.addEventListener("change", (e) => {
-//   e.target.value = sanitizeInput(e.target.value);
-// });
-
 document.addEventListener("keydown", (e) => {
   let key = e.key;
   if (key === "Enter") {
